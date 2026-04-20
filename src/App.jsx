@@ -546,8 +546,8 @@ function ProductImageCarousel({ selectedColor, wishlist, onWishlist }) {
 
 // ============ BUY BUTTONS SECTION ============
 function BuySection({ selectedColor, qty, onQtyChange, onBuyNow }) {
-  const priceNum = selectedColor === 'verde' ? 314.03 : 298.90
-  const priceLabel = selectedColor === 'verde' ? '314,03' : '298,90'
+  const priceNum = 59.90
+  const priceLabel = '59,90'
   
   return (
     <div className="buy-section">
@@ -598,7 +598,7 @@ function BuySection({ selectedColor, qty, onQtyChange, onBuyNow }) {
 
 // ============ STICKY BUY BAR ============
 function StickyBuyBar({ onBuyNow, selectedColor, qty }) {
-  const priceNum = selectedColor === 'verde' ? 314.03 : 298.90
+  const priceNum = 59.90
   const totalLabel = (priceNum * qty).toFixed(2).replace('.', ',')
   return (
     <div className="sticky-buy-bar" id="sticky-bar">
@@ -629,8 +629,8 @@ function SafetySection() {
 // ============ COLOR SELECTOR ============
 function ColorSelector({ selectedColor, setSelectedColor }) {
   const colors = [
-    { id: 'preto', name: 'Preto', options: '9 opções de', price: '200,90 €', img: '/watch_black.png' },
-    { id: 'verde', name: 'verde', options: '12 opções de', price: '201,72 €', img: '/watch_green.png' },
+    { id: 'preto', name: 'Preto', options: '9 opções de', price: '59,90 €', img: '/watch_black.png' },
+    { id: 'verde', name: 'verde', options: '12 opções de', price: '59,90 €', img: '/watch_green.png' },
   ]
   return (
     <div className="color-section">
@@ -1111,7 +1111,7 @@ export default function App() {
         </main>
       ) : (
         <Checkout 
-          price={selectedColor === 'verde' ? 314.03 : 298.90}
+          price={59.90}
           qty={qty}
           onQtyChange={setQty}
           onGoBack={() => setPage('product')} 
